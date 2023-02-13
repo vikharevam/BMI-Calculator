@@ -49,7 +49,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="nr6-hs-RxV" secondAttribute="bottom" id="a5w-05-CTO"/>
                                                     <constraint firstItem="nr6-hs-RxV" firstAttribute="top" secondItem="45R-ZI-PQ2" secondAttribute="top" id="d5W-WX-zA5"/>
                                                     <constraint firstItem="nr6-hs-RxV" firstAttribute="leading" secondItem="45R-ZI-PQ2" secondAttribute="leading" id="n70-Zp-RHf"/>
-                                                    <constraint firstItem="rhe-LT-yyG" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nr6-hs-RxV" secondAttribute="trailing" constant="37" id="qR3-Nh-D9e"/>
+                                                    <constraint firstItem="rhe-LT-yyG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nr6-hs-RxV" secondAttribute="trailing" constant="10" id="qR3-Nh-D9e"/>
                                                     <constraint firstItem="nr6-hs-RxV" firstAttribute="leading" secondItem="45R-ZI-PQ2" secondAttribute="leading" id="qeA-8C-9sw"/>
                                                     <constraint firstAttribute="bottom" secondItem="nr6-hs-RxV" secondAttribute="bottom" id="xkK-xX-tbZ"/>
                                                 </constraints>
@@ -75,7 +75,7 @@
                                                     <constraint firstItem="sIX-UT-T7g" firstAttribute="top" secondItem="WFH-1H-CSd" secondAttribute="top" id="9dx-wQ-S51"/>
                                                     <constraint firstAttribute="bottom" secondItem="sIX-UT-T7g" secondAttribute="bottom" id="Oxl-Q6-pv1"/>
                                                     <constraint firstItem="sIX-UT-T7g" firstAttribute="leading" secondItem="WFH-1H-CSd" secondAttribute="leading" id="SZi-J7-2RN"/>
-                                                    <constraint firstItem="2X9-s4-Rd3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="sIX-UT-T7g" secondAttribute="trailing" constant="37" id="Uy7-tH-y7X"/>
+                                                    <constraint firstItem="2X9-s4-Rd3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sIX-UT-T7g" secondAttribute="trailing" constant="10" id="Uy7-tH-y7X"/>
                                                     <constraint firstItem="2X9-s4-Rd3" firstAttribute="centerY" relation="lessThanOrEqual" secondItem="WFH-1H-CSd" secondAttribute="centerY" id="VmX-rA-xrT"/>
                                                     <constraint firstItem="sIX-UT-T7g" firstAttribute="top" secondItem="WFH-1H-CSd" secondAttribute="top" id="XYU-Ae-i8X"/>
                                                     <constraint firstAttribute="trailing" secondItem="2X9-s4-Rd3" secondAttribute="trailing" id="e1H-qz-utT"/>
@@ -97,11 +97,14 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VnA-PG-Kz0">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="VnA-PG-Kz0">
                                                         <rect key="frame" x="-2" y="33" width="248" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="244" id="Gli-BV-PEf"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="userSelectHeight:" destination="BYZ-38-t0r" eventType="valueChanged" id="asr-Ih-4vB"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
@@ -114,8 +117,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-uQ-x2s">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-uQ-x2s">
                                                         <rect key="frame" x="-2" y="33" width="248" height="31"/>
+                                                        <connections>
+                                                            <action selector="userSelectWeight:" destination="BYZ-38-t0r" eventType="valueChanged" id="r1s-cI-WGs"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
@@ -159,6 +165,10 @@
                             <constraint firstItem="pw2-1y-pnm" firstAttribute="firstBaseline" secondItem="ibk-eQ-TMq" secondAttribute="baseline" constant="50" id="viM-02-HYT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightValue" destination="2X9-s4-Rd3" id="1M6-SS-oyx"/>
+                        <outlet property="weightValue" destination="rhe-LT-yyG" id="Jv1-X7-1Cy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
