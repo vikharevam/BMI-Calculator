@@ -25,7 +25,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="45R-ZI-PQ2">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scales_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="nr6-hs-RxV">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Growth_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="nr6-hs-RxV">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="FdD-X2-bsl"/>
@@ -57,7 +57,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="WFH-1H-CSd">
                                                 <rect key="frame" x="0.0" y="75" width="187" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Growth_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="sIX-UT-T7g">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scales_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="sIX-UT-T7g">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="8Ln-Ud-Dzy"/>
@@ -97,7 +97,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="VnA-PG-Kz0">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2.6000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="VnA-PG-Kz0">
                                                         <rect key="frame" x="-2" y="33" width="248" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="244" id="Gli-BV-PEf"/>
@@ -117,7 +117,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-uQ-x2s">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-uQ-x2s">
                                                         <rect key="frame" x="-2" y="33" width="248" height="31"/>
                                                         <connections>
                                                             <action selector="userSelectWeight:" destination="BYZ-38-t0r" eventType="valueChanged" id="r1s-cI-WGs"/>
@@ -141,6 +141,9 @@
                                         <state key="normal" title="Рассчитать">
                                             <color key="titleShadowColor" red="0.27587064929999999" green="0.30827336869999999" blue="0.40072732020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="calculatePassedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FvZ-wR-Aw5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -166,8 +169,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="heightValue" destination="2X9-s4-Rd3" id="1M6-SS-oyx"/>
-                        <outlet property="weightValue" destination="rhe-LT-yyG" id="Jv1-X7-1Cy"/>
+                        <outlet property="heightLabel" destination="rhe-LT-yyG" id="B8r-ZJ-y2W"/>
+                        <outlet property="heightSlider" destination="VnA-PG-Kz0" id="lxm-oT-jYE"/>
+                        <outlet property="weightLabel" destination="2X9-s4-Rd3" id="THg-Qv-hT5"/>
+                        <outlet property="weightSlider" destination="pkx-uQ-x2s" id="ayU-vS-GLy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
