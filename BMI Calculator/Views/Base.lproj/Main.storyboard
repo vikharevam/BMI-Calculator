@@ -39,7 +39,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="UQb-h4-i87"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -68,7 +68,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2X9-s4-Rd3">
                                                         <rect key="frame" x="87" y="0.0" width="100" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -99,7 +99,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2.6000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="VnA-PG-Kz0">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2.2000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="VnA-PG-Kz0">
                                                         <rect key="frame" x="-2" y="33" width="248" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="244" id="Gli-BV-PEf"/>
@@ -119,7 +119,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-uQ-x2s">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-uQ-x2s">
                                                         <rect key="frame" x="-2" y="33" width="248" height="31"/>
                                                         <connections>
                                                             <action selector="userSelectWeight:" destination="BYZ-38-t0r" eventType="valueChanged" id="r1s-cI-WGs"/>
@@ -176,6 +176,8 @@
                     <connections>
                         <outlet property="heightLabel" destination="rhe-LT-yyG" id="B8r-ZJ-y2W"/>
                         <outlet property="heightSlider" destination="VnA-PG-Kz0" id="lxm-oT-jYE"/>
+                        <outlet property="rulesViewIcon" destination="nr6-hs-RxV" id="wG1-e5-Z26"/>
+                        <outlet property="scalerViewIcon" destination="sIX-UT-T7g" id="ms4-6Y-cTD"/>
                         <outlet property="weightLabel" destination="2X9-s4-Rd3" id="THg-Qv-hT5"/>
                         <outlet property="weightSlider" destination="pkx-uQ-x2s" id="ayU-vS-GLy"/>
                         <segue destination="yr4-lM-jlT" kind="modal" identifier="goToResult" id="9ef-S5-Iog"/>
@@ -215,16 +217,19 @@
                                     <action selector="resetPresset:" destination="yr4-lM-jlT" eventType="touchUpInside" id="lku-Lm-txs"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-YB-zUI">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-YB-zUI">
                                 <rect key="frame" x="35" y="280" width="250" height="96"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="giD-K9-inW">
                                         <rect key="frame" x="0.0" y="1" width="250" height="41"/>
                                         <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="uMx-SO-KUV"/>
+                                        </constraints>
                                         <imageReference key="image" image="exclamationmark.triangle.fill" catalog="system" symbolScale="default"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здесь будет отображаться текст совета" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-dA-yrd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здесь будет отображаться текст совета" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-dA-yrd">
                                         <rect key="frame" x="0.0" y="53" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>

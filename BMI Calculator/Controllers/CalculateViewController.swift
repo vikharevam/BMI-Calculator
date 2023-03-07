@@ -17,6 +17,9 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
     
+    @IBOutlet weak var rulesViewIcon: UIImageView!
+    
+    @IBOutlet weak var scalerViewIcon: UIImageView!
     
     
     override func viewDidLoad() {
@@ -30,12 +33,22 @@ class CalculateViewController: UIViewController {
     @IBAction func userSelectHeight(_ sender: UISlider) {
         heightLabel.text = " \(String(format: "%.2f", sender.value)) м"
         
+        if sender.value > 0 {
+            rulesViewIcon.image = UIElements().uiRulerActive.active
+        } else {
+            rulesViewIcon.image = UIElements().uiRulerActive.deactive
+        }
     }
     
     
     @IBAction func userSelectWeight(_ sender: UISlider) {
         weightLabel.text = " \(String(format: "%.1f", sender.value)) кг"
         
+        if sender.value > 0 {
+            scalerViewIcon.image = UIElements().uiScales.active
+        } else {
+            scalerViewIcon.image = UIElements().uiScales.deactive
+        }
     }
     
     
@@ -57,6 +70,8 @@ class CalculateViewController: UIViewController {
             destinationVC.color = calculatorBrain.getColor()       }
         
     }
+    
+    
     
     func reloadView(){
         heightLabel.text = "0.0 м"
