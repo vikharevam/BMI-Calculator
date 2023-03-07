@@ -14,6 +14,8 @@
 		95550318299A3F440070FCD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95550317299A3F440070FCD3 /* Assets.xcassets */; };
 		9555031B299A3F440070FCD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95550319299A3F440070FCD3 /* LaunchScreen.storyboard */; };
 		95986E7629B71B820082F3A4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95986E7529B71B820082F3A4 /* ResultViewController.swift */; };
+		95EAB9F229B7362F003E2DC1 /* СalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAB9F129B7362F003E2DC1 /* СalculatorBrain.swift */; };
+		95EABA0729B74BEF003E2DC1 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABA0629B74BEF003E2DC1 /* BMI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		9555031A299A3F440070FCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9555031C299A3F440070FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95986E7529B71B820082F3A4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		95EAB9F129B7362F003E2DC1 /* СalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СalculatorBrain.swift"; sourceTree = "<group>"; };
+		95EABA0629B74BEF003E2DC1 /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		95F5C2E629B34A7300CA5B5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				95EAB9F129B7362F003E2DC1 /* СalculatorBrain.swift */,
+				95EABA0629B74BEF003E2DC1 /* BMI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 				9555030F299A3F3F0070FCD3 /* AppDelegate.swift in Sources */,
 				95550311299A3F3F0070FCD3 /* SceneDelegate.swift in Sources */,
 				95986E7629B71B820082F3A4 /* ResultViewController.swift in Sources */,
+				95EABA0729B74BEF003E2DC1 /* BMI.swift in Sources */,
+				95EAB9F229B7362F003E2DC1 /* СalculatorBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
