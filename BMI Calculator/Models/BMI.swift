@@ -13,13 +13,7 @@ struct BMI {
     var bmiValue: Float
     var advice: String
     var color: UIColor
-
-    
-    func getColor() {
         
-    }
-    
-    
     
 }
 

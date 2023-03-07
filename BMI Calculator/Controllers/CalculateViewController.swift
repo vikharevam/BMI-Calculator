@@ -21,7 +21,8 @@ class CalculateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        reloadView()
+        
     }
     
     
@@ -42,14 +43,9 @@ class CalculateViewController: UIViewController {
         let height = heightSlider.value
         let weight = weightSlider.value
         
-        
         calculatorBrain.calculatorBMI(weight: weight, height: height)
-//        bmiValue = String(format: "%.1f", bmi)
-        
-        
-        
+    
         self.performSegue(withIdentifier: "goToResult", sender: self)
-        
         
     }
     
@@ -60,5 +56,10 @@ class CalculateViewController: UIViewController {
             destinationVC.advice = calculatorBrain.getAdvice()
             destinationVC.color = calculatorBrain.getColor()       }
         
+    }
+    
+    func reloadView(){
+        heightLabel.text = "0.0 м"
+        weightLabel.text = "0.0 кг"
     }
 }
